@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_images', function (Blueprint $table) {
+            //doesnt have primary key
             $table->string('location');
-            $table->string('product_id');
+            $table->string('product_id'); // should be same type as product id and be constarined
             $table->timestamp('created_at')->nullable();
         });
     }

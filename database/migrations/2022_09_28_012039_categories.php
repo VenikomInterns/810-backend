@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
+            //doesnt have primary key
             $table->string('name');
-            $table->timestamp('created_at')->nullable();
+            $table->timestamp('created_at')->nullable(); 
         });
         //
     }

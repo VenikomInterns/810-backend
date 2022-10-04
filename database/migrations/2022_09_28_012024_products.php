@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->string('name')->nullable();
+            //doesnt have primary key
+            $table->string('name')->nullable(); // nullable name?
             $table->string('description')->nullable();
             $table->string('image')->nullable()->nullable();
-            $table->string('category_id');
-            $table->timestamp('created_at')->nullable();
+            $table->string('category_id'); // should be same type as category and be constrained
+            $table->timestamp('created_at')->nullable(); //why created_at is nullable?
         });
     }
 

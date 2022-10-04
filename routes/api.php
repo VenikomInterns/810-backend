@@ -27,7 +27,7 @@ Route::group([
 ], function ($router) {
 
     Route::post("/login", [LoginController::class, 'login']);  //get all products
-
+    //ok
 });
 
 
@@ -35,12 +35,12 @@ Route::group([
 Route::prefix('products')->group(function(){
     Route::get("/", [ProductsController::class, 'index']);  //get all products
     Route::get("/category/{id}", [ProductsController::class, 'GetProductsByCategory']);  //get all products by category
-});
+}); //its more natural to be /categories/{id}/products, but ok 
 
 
 Route::prefix('categories')->group(function(){
     Route::get("/", [CategoriesContoller::class, 'index']);  //get all categories
-});
+}); //ok
 
 Route::prefix('admin')->group(function(){
     Route::prefix('products')->group(function() {
@@ -49,6 +49,6 @@ Route::prefix('admin')->group(function(){
         Route::post("/", [ProductsController::class, 'CreateProduct'])->middleware(['role:admin']);  //create product
         Route::delete("/{id}", [ProductsController::class, 'DeleteProduct'])->middleware(['role:admin']);  //delete product
         Route::put("/{id}", [ProductsController::class, 'EditProduct'])->middleware(['role:admin']);  //edit  product
-    });
+    }); //ok
 });
 

@@ -14,5 +14,5 @@ class CategoriesContoller extends Controller
         ];
         return $data;
     }
-    //
+    //this should return categories list, and fetch them from database. 
 }

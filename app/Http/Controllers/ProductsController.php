@@ -12,11 +12,11 @@ class ProductsController extends Controller
             'user_name' =>"Zdravko Colic",
         ];
         return $data;
-    }
+    } //hmm
 
 
     public function GetProductsByCategory($id){
 
     }
-    //
+    // not implemented
 }

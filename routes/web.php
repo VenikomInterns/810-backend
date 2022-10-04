@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 Route::get('gfg', function () {
     return view('gfg');
-});
+}); //gfg wtf

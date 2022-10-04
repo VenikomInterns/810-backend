@@ -40,7 +40,7 @@ class LoginController extends Controller
         }
 
         return $this->respondWithToken($token);
-    }
+    } //ok
 
     /**
      * Get the authenticated User.
